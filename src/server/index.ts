@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import pool from './db';
+
+import todoRoutes from './routes/todos';
 
 const app = express();
 
@@ -9,6 +10,8 @@ app.use(cors());
 app.use(express.json());
 
 // routes
+
+app.use('/todo', todoRoutes);
 
 app.listen(8080, () => {
     console.log('Server has started on port 8080');

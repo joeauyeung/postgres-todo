@@ -1,7 +1,8 @@
 import { Pool } from 'pg';
 
 const pool = new Pool({
-    user: 'postgres',
+    user: 'joe',
+    password: 'password',
     host: 'localhost',
     port: 5432,
     database: 'perntodo',
